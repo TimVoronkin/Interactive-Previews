@@ -444,7 +444,7 @@ I~když API samotných \textit{Promises} (metody \texttt{.then()} a~\texttt{.cat
 \subsection{Přehled existujících rozšíření pro náhledy a~jejich hodnocení}
 \label{subsec:teorie_existujici}
 
-Koncept interaktivních náhledů pomocí najetí myší (hover) není v~prostředí webových prohlížečů novinkou. Existuje několik zaběhnutých řešení, mezi nejznámější patří rozšíření \textit{Imagus} a~\textit{Hover Zoom+}. Obě tato řešení však trpí určitými nedostatky, které odůvodňují vývoj vlastního, moderního nástroje.
+Koncept interaktivních náhledů pomocí najetí myší (hover) není v~prostředí webových prohlížečů novinkou. Existuje několik zaběhnutých řešení, mezi nejznámější patří rozšíření \textit{Hover Zoom+} a~\textit{Imagus} (resp. jeho komunitní nástupce \textit{Imagus Reborn}). Tato řešení však trpí určitými nedostatky, které odůvodňují vývoj vlastního, moderního nástroje.
 
 \subsubsection*{Rozšíření Hover Zoom+}
 Rozšíření \textbf{Hover Zoom+} (viz obrázek~\ref{fig:hoverzoom}) je jedním z~historicky nejznámějších nástrojů v~této kategorii. Původní verze (Hover Zoom) měla v~minulosti vážné bezpečnostní problémy spojené se sledováním uživatelů a~vkládáním škodlivého kódu (spyware), což vedlo k~narušení důvěry komunity a~jejímu odstranění z~obchodů s~doplňky.
@@ -475,14 +475,14 @@ Současná verze se sice pyšní otevřeným zdrojovým kódem (open-source), av
     \label{fig:hoverzoom}
 \end{figure}
 
-\subsubsection*{Rozšíření Imagus}
-Rozšíření \textbf{Imagus} (viz obrázek~\ref{fig:imagus}) představuje podobný nástroj. Je sice populární a~funkční pro široké spektrum obrázkových galerií, avšak jeho vývoj v~posledních letech do značné míry ustrnul (tzv.~abandonware). Kódová základna byla původně optimalizována pro Manifest~V2, což s~sebou přináší riziko nefunkčnosti v~moderních prohlížečích po plném přechodu na specifikaci~V3.
+\clearpage
 
-I~zde platí, že chybí podpora nativního renderování vícestránkových dokumentů~PDF, a~stejně jako Hover Zoom+ se vyznačuje složitou konfigurací pravidel (Sieve), která vyžaduje psaní regulárních výrazů i~pro zcela banální úkoly.
+\subsubsection*{Rozšíření Imagus a~Imagus~Reborn}
+Rozšíření \textbf{Imagus} bylo v~době svého vzniku jedním z~nejpopulárnějších nástrojů pro interaktivní náhledy obrázků. Získalo si rozsáhlou uživatelskou základnu díky podpoře širokého spektra obrázkových galerií. Jeho vývoj však v~posledních letech do značné míry ustrnul a~projekt se de facto stal tzv.~abandonware. Kódová základna byla původně optimalizována pro Manifest~V2, což s~sebou přináší riziko nefunkčnosti v~moderních prohlížečích po plném přechodu na specifikaci~V3.
 
-\def\TODO: #1\par{{\color{red}TODO: #1}\par}
+Jako reakce na opuštění původního projektu vznikl komunitní fork \textbf{Imagus Reborn} (viz obrázek~\ref{fig:imagus}), jehož cílem je zachovat původní funkcionalitu a~zároveň zajistit kompatibilitu s~moderními prohlížeči. Na rozdíl od svého předchůdce je Imagus Reborn postaven na specifikaci Manifest~V3 a~jeho databáze pravidel (tzv.~\textit{Sieves}) je aktivně spravována komunitou vývojářů.
 
-\TODO: PŘIDAT informace o Imagus Reborn, který je na obrázku!
+I~přes toto oživení projektu přetrvávají zásadní omezení: ani Imagus Reborn nenabízí nativní podporu pro renderování vícestránkových dokumentů~PDF. Stejně jako původní verze se navíc vyznačuje složitou konfigurací pravidel Sieve, která vyžaduje psaní regulárních výrazů i~pro zcela banální úkoly a~tím zůstává výraznou bariérou pro běžné uživatele.
 
 \begin{figure}[htbp]
     \centering
@@ -498,7 +498,7 @@ I~zde platí, že chybí podpora nativního renderování vícestránkových dok
         \includegraphics[width=\textwidth]{img/competitors_Imagus-Reborn_Options.png}
         \caption{Konfigurační rozhraní (Options) s~pravidly ve formátu Sieve}
     \end{subfigure}
-    \caption{Ukázka konkurenčního rozšíření Imagus}
+    \caption{Ukázka konkurenčního rozšíření Imagus Reborn}
     \label{fig:imagus}
 \end{figure}
 
@@ -634,13 +634,20 @@ Mezi hlavní testovací scénáře patřily:
     \item \textbf{Ochrana proti nechtěnému spuštění (Accidental Hover):} Simulace běžného čtení a~rychlého posunu kurzoru přes obrazovku. Očekávaným chováním je, že časovač s~prodlevou (\textit{hover delay}) spolehlivě zabrání okamžitému zobrazení náhledu a~ušetří tak výpočetní i~síťové zdroje.
 \end{itemize}
 
-Při testování na portálu \textit{Wikipedia} a~e-shopu \textit{Alza} (viz obrázek~\ref{fig:preview_img_alza}) rozšíření úspěšně extrahovalo verze obrázků ve vysokém rozlišení z~atributů \texttt{srcset}, přičemž plovoucí okno plynule následovalo kurzor myši bez tzv.~artefaktů překreslování (\textit{screen tearing}). Na univerzitním informačním systému a~hlavních stránkách univerzity (viz obrázek~\ref{fig:preview_svg_upce}) pak rozšíření spolehlivě zachytávalo odkazy směřující na soubory~PDF a~SVG, stahovalo je na pozadí a~s~minimální latencí vykreslovalo první strany dokumentů, a~to i~u~vizuálně komplexních sylabů předmětů. Proti nechtěnému otevírání náhledů při rychlém přejetí myší byla úspěšně otestována implementace časovače s~konstantním zpožděním 500~milisekund.
+Při testování na portálu \textit{Wikipedia} a~e-shopu \textit{Alza} (viz obrázek~\ref{fig:preview_img_alza}) rozšíření úspěšně extrahovalo verze obrázků ve vysokém rozlišení z~atributů \texttt{srcset}, přičemž plovoucí okno plynule následovalo kurzor myši bez tzv.~artefaktů překreslování (\textit{screen tearing}). Na portálu \textit{ArtStation} (viz obrázek~\ref{fig:preview_img_artstation}) bylo ověřeno správné chování na webech s~dynamicky načítanými obrázky v~vysokém rozlišení. Na univerzitním informačním systému a~hlavních stránkách univerzity (viz obrázek~\ref{fig:preview_svg_upce}) pak rozšíření spolehlivě zachytávalo odkazy směřující na soubory~PDF a~SVG, stahovalo je na pozadí a~s~minimální latencí vykreslovalo první strany dokumentů, a~to i~u~vizuálně komplexních sylabů předmětů. Proti nechtěnému otevírání náhledů při rychlém přejetí myší byla úspěšně otestována implementace časovače s~konstantním zpožděním 500~milisekund.
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.9\textwidth]{img/scr_preview-img_on-alza.png}
     \caption{Náhled produktu na e-shopu Alza s~využitím zobrazení obrázku v~nejvyšším rozlišení}
     \label{fig:preview_img_alza}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.9\textwidth]{img/scr_preview-img_on-zvit-studio.png}
+    \caption{Náhled obrázku na portálu pro sdílení digitálního umění ArtStation}
+    \label{fig:preview_img_artstation}
 \end{figure}
 
 \begin{figure}[htbp]

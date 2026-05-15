@@ -1,6 +1,3 @@
-<!-- title with icon of app -->
-
-
 # <img src="assets/icons/icon_app_48.png" alt="Logo" height="36"> Interactive Previews - browser extension
 
 This repository contains the source code and documentation for my **Bachelor Thesis** at the University of Pardubice - Faculty of Electrical Engineering and Informatics.
@@ -41,7 +38,7 @@ This extension is currently in development and can be installed manually (unpack
 
 The full text of the bachelor thesis, written in Czech, including theoretical background, architecture design, and testing results, can be found here:
 
-👉 **[Documentation/Voronkin_Tymofii_BP_2026.pdf](./Documentation/Voronkin_Tymofii_BP_2026.pdf)**
+👉 **[Documentation/VoronkinT_ InteaktivniNahledy_TH_2026.pdf](./Documentation/VoronkinT_ InteaktivniNahledy_TH_2026.pdf)**
 
 
 ### ⚛️ LaTeX Live Preview

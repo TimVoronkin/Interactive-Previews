@@ -1,2 +1,2 @@
 $ENV{'TZ'}='Europe/Prague';
-$success_cmd = 'cp "%D" "../VoronkinT_ InteaktivniNahledy_TH_2026.pdf"';
+$success_cmd = 'cp "%D" "../VoronkinT_InteaktivniNahledy_TH_2026.pdf"';

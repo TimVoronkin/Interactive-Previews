@@ -16,10 +16,8 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
             return res.arrayBuffer();
         })
         .then(buffer => {
-            // cant send arraybuffer thru message channel directly, gotta convert to plain array
-            // ugly but works, json serializes it fine
-            const uint8 = Array.from(new Uint8Array(buffer));
-            sendResponse({ success: true, data: uint8 });
+            // send the arraybuffer directly (Chrome supports structured cloning of ArrayBuffers)
+            sendResponse({ success: true, data: buffer });
         })
         .catch(err => {
             // log + send error back so content script can show err state

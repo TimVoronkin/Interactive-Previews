@@ -7,27 +7,30 @@ This repository contains the source code and documentation for my **Bachelor The
 **Interactive Previews** is a modern browser extension designed to increase web browsing efficiency. Instead of constantly clicking links to view images or download PDF files, this extension allows you to instantly preview them by simply hovering your mouse cursor over the link.
 
 ### Features
-* 🖼️ **Instant Image Previews**: Automatically finds and displays the highest resolution image available using `srcset` and `sizes`. Supports various formats (JPG, PNG, GIF, WebP, SVG, AVIF, BMP, ICO, TIFF).
-* 📄 **Native PDF Rendering**: Integrated `PDF.js` library allows rendering multi-page PDF documents securely without downloading them locally.
-* ℹ️ **Customizable Info Bar**: Displays metadata like image dimensions, file size, MIME type, and PDF page counts, with fully configurable visibility and ordering.
-* ⚙️ **Granular Control**: 
-  * Master toggles to independently enable/disable Image or PDF previews.
-  * Smart Triggers: Configure hover delays or require modifier keys (Shift, Ctrl, Alt).
-  * Enable or disable the extension on specific domains (Blocklist/Allowlist) with full Regular Expression (Regex) support.
-* 🚀 **Performance Optimized**: Built with Manifest V3, utilizing Service Workers and asynchronous Fetch API.
+
+- 🖼️ **Instant Image Previews**: Automatically finds and displays the highest resolution image available using `srcset` and `sizes`. Supports various formats (JPG, PNG, GIF, WebP, SVG, AVIF, BMP, ICO, TIFF).
+- 📄 **Native PDF Rendering**: Integrated `PDF.js` library allows rendering multi-page PDF documents securely without downloading them locally.
+- ℹ️ **Customizable Info Bar**: Displays metadata like image dimensions, file size, MIME type, and PDF page counts, with fully configurable visibility and ordering.
+- ⚙️ **Granular Control**:
+  - Master toggles to independently enable/disable Image or PDF previews.
+  - Smart Triggers: Configure hover delays or require modifier keys (Shift, Ctrl, Alt).
+  - Enable or disable the extension on specific domains (Blocklist/Allowlist) with full Regular Expression (Regex) support.
+- 🚀 **Performance Optimized**: Built with Manifest V3, utilizing Service Workers and asynchronous Fetch API.
 
 ## 📥 Installation
 
 This extension is currently in development and can be installed manually (unpacked) in your browser.
 
 ### For Google Chrome / Edge / Brave:
+
 1. Download or clone this repository to your local machine.
 2. Open your browser and go to `chrome://extensions/`.
 3. Enable **"Developer mode"** (usually a toggle in the top right corner).
-4. Click on **"Load unpacked"** and select the `src` folder from this repository.
+4. Click on **"Load unpacked"** and select the **root folder** of the repository (the one containing `manifest.json`).
 5. The extension is now installed and ready to use!
 
 ### For Mozilla Firefox:
+
 1. Download or clone this repository.
 2. Open Firefox and go to `about:debugging#/runtime/this-firefox`.
 3. Click on **"Load Temporary Add-on..."**
@@ -38,8 +41,7 @@ This extension is currently in development and can be installed manually (unpack
 
 The full text of the bachelor thesis, written in Czech, including theoretical background, architecture design, and testing results, can be found here:
 
-👉 **[Documentation/VoronkinT_ InteaktivniNahledy_TH_2026.pdf](./Documentation/VoronkinT_ InteaktivniNahledy_TH_2026.pdf)**
-
+👉 **[Documentation/VoronkinT_InteaktivniNahledy_TH_2026.pdf](./Documentation/VoronkinT_InteaktivniNahledy_TH_2026.pdf)**
 
 ### ⚛️ LaTeX Live Preview
 

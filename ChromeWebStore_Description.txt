@@ -1,0 +1,45 @@
+Interactive Previews is a modern, lightweight, and highly customizable browser extension designed to make your web browsing faster, safer, and more efficient.
+
+Tired of clicking every link just to see what image is behind it? Fed up with downloading massive PDF files only to realize they weren't what you were looking for? Interactive Previews solves this by generating instant, interactive hover previews of images and PDF documents directly on the webpage you are browsing.
+
+
+🖼️ Core Features:
+================
+- Instant Image Previews:
+Hover over any image link, direct image, or thumbnail to view it instantly. The extension automatically fetches and renders the highest resolution version available using srcset and sizes attributes.
+
+- Broad Format Support:
+Works seamlessly with standard image formats (such as PNG, JPEG and GIF) as well as vector graphics and modern web files.
+
+- Native multi-page PDF Viewer:
+Includes a built-in rendering engine (powered by PDF.js) that lets you preview multi-page PDF documents on hover. You can scroll through pages, select/copy text, and even click links inside the PDF preview—all without downloading the file to your computer.
+
+- Customizable Info Bar:
+Displays critical metadata at a glance (image dimensions, aspect ratio, file name, extension, file size, MIME type, and page count). Fully customize which details are shown and in what order using an intuitive drag-and-drop options interface.
+
+- Smart Sizing & Layouts:
+Choose how previews are sized—display at original size, fit to the viewport, or specify custom dimensions (e.g., maximum width/height in pixels).
+
+- Advanced Triggers:
+Prevent accidental hover overlays by configuring a custom hover delay (in milliseconds) or requiring modifier keys (Shift, Ctrl, Alt/Option) to trigger the preview.
+
+- Granular Domain Filtering:
+Easily whitelist or blacklist specific websites where the extension should or should not run. Supports regular expressions (Regex) for advanced URL filtering.
+
+
+🚀 Why Install Interactive Previews?
+==============================
+- Save Time & Bandwidth:
+Avoid page redirects, unnecessary tab management, and unwanted PDF downloads. Decide if a link is worth visiting in under a second.
+
+- Seamless Navigation:
+Move your cursor away, and the preview instantly disappears, keeping your workspace clean.
+
+- Optimized for Modern Web:
+Built on Manifest V3, the extension is fast, secure, uses minimal memory, and respects your privacy.
+
+- Privacy-Focused:
+No user tracking, no data collection, and no remote code. All rendering and settings storage happen locally on your device.
+
+======
+Improve your daily browsing workflow today with Interactive Previews!

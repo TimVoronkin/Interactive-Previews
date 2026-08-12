@@ -1,12 +1,14 @@
 # <img src="assets/icons/icon_app_48.png" alt="Logo" height="36"> Interactive Previews - browser extension
 
-This repository contains the source code and documentation for my **Bachelor Thesis** at the University of Pardubice - Faculty of Electrical Engineering and Informatics.
-
-## 🎓 About the Project
+[![Chrome Web Store](https://img.shields.io/chrome-web-store/v/jepoffecegkfnbnjgjpcjmelefnnghhj?logo=googlechrome&logoColor=white&label=Chrome%20Web%20Store)](https://chromewebstore.google.com/detail/jepoffecegkfnbnjgjpcjmelefnnghhj)
 
 **Interactive Previews** is a modern browser extension designed to increase web browsing efficiency. Instead of constantly clicking links to view images or download PDF files, this extension allows you to instantly preview them by simply hovering your mouse cursor over the link.
 
-### Features
+🎓 *This repository contains the source code and documentation for my **Bachelor Thesis** at the University of Pardubice - Faculty of Electrical Engineering and Informatics.*
+
+---
+
+## ✨ Key Features
 
 - 🖼️ **Instant Image Previews**: Automatically finds and displays the highest resolution image available using `srcset` and `sizes`. Supports various formats (JPG, PNG, GIF, WebP, SVG, AVIF, BMP, ICO, TIFF).
 - 📄 **Native PDF Rendering**: Integrated `PDF.js` library allows rendering multi-page PDF documents securely without downloading them locally.
@@ -19,9 +21,18 @@ This repository contains the source code and documentation for my **Bachelor The
 
 ## 📥 Installation
 
-This extension is currently in development and can be installed manually (unpacked) in your browser.
+### 🚀 Recommended: Chrome Web Store
+The easiest way to install the extension is directly from the Chrome Web Store (with automatic background updates):
 
-### For Google Chrome / Edge / Brave:
+👉 **[Install Interactive Previews from Chrome Web Store](https://chromewebstore.google.com/detail/jepoffecegkfnbnjgjpcjmelefnnghhj)**
+
+---
+
+### 🛠️ Manual Installation (For Developers & Testing)
+
+If you want to run the extension from source code:
+
+#### For Google Chrome / Edge / Brave:
 
 1. Download or clone this repository to your local machine.
 2. Open your browser and go to `chrome://extensions/`.
@@ -29,7 +40,7 @@ This extension is currently in development and can be installed manually (unpack
 4. Click on **"Load unpacked"** and select the **root folder** of the repository (the one containing `manifest.json`).
 5. The extension is now installed and ready to use!
 
-### For Mozilla Firefox:
+#### For Mozilla Firefox:
 
 1. Download or clone this repository.
 2. Open Firefox and go to `about:debugging#/runtime/this-firefox`.
